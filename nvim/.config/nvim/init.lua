@@ -1,7 +1,5 @@
-require("core.lazy")
+require("core.settings")
 
 require("core.keymaps")
-require("core.plugins")
-require("core.options")
 
-require("core.colorscheme")
+require("core.lazy"
