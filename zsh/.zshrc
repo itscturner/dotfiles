@@ -40,7 +40,7 @@ alias wofimocha='wofi --conf ~/.config/wofi/config --style ~/.config/wofi/themes
 HYPHEN_INSENSITIVE="true"
 
 # prompt
-
+PROMPT='%F{white}[%f %F{green}%n%f %F{red}%1~%f %F{white}] $%f '
 
 # plugins
 plugins=(zsh-syntax-highlighting)
