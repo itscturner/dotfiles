@@ -1,5 +1,5 @@
 # theme
-theme                          = catppuccin-latte
+theme                          = catppuccin-frappe
 #font-family                    = "Maple Mono NF"
 font-size                      = 14
 window-inherit-font-size       = true
