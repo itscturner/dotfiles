@@ -12,6 +12,7 @@ alias mv='mv -i'
 alias grep='grep --color'
 alias ff='fastfetch'
 alias systemupdate='pacman -Syu'
+alias lock='hyprlock'
 
 # editor
 export EDITOR='nvim'
