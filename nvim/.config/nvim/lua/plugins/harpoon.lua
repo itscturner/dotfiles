@@ -1,3 +1,5 @@
+-- https://github.com/ThePrimeagen/harpoon
+
 {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
