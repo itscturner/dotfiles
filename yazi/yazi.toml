@@ -1,0 +1,10 @@
+[mgr]
+sort_by = "alphabetical"
+sort_dir_first = true
+show_hidden = true
+
+[input]
+cursor_blink = true
+cd_title = "Change Directory:"
+cd_origin = "top-center"
+
