@@ -26,7 +26,7 @@
 //  "custom/notifications": {
 //  },
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "<span foreground='#f5c2e7'>   </span>{:%B %d  %H:%M}",
     "tooltip": false
 //    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
   },
