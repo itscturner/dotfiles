@@ -94,7 +94,7 @@
         "color": "#04a5e5",
         "fill": "",
         "iconColor": "#ffffff",
-        "iconType": "ri-box-3-line",
+        "iconType": "nf-cod-mail",
         "name": "GMail",
         "type": "bookmark",
         "url": "https://gmail.com"
@@ -130,7 +130,7 @@
         "color": "#dc8a78",
         "fill": "",
         "iconColor": "#ffffff",
-        "iconType": "ri-box-3-line",
+        "iconType": "nf-md-alpha_w",
         "name": "Wired",
         "type": "bookmark",
         "url": "https://www.wired.com/"
