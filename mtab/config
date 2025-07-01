@@ -1,1 +1,135 @@
 
+{
+  "options": {
+    "showOptionsButton": true
+  },
+  "user": {
+    "name": "cturner"
+  },
+  "title": {
+    "defaultTitle": "cturner",
+    "dynamic": {
+      "enabled": true
+    },
+    "faviconType": "default"
+  },
+  "message": {
+    "enabled": true,
+    "font": {
+      "type": "default",
+      "custom": ""
+    },
+    "textColor": "#ffffff",
+    "textSize": 3.75,
+    "type": "afternoon-morning",
+    "customText": "your custom text",
+    "weather": {
+      "unitsType": "f"
+    }
+  },
+  "wallpaper": {
+    "type": "url",
+    "enabled": true,
+    "url": "./wallpapers/default.png",
+    "filters": {
+      "brightness": "1",
+      "blur": "0px"
+    }
+  },
+  "ui": {
+    "style": "glass",
+    "glassColor": "#ffffff20",
+    "blurStrength": "32px",
+    "foregroundColor": "#262626",
+    "backgroundColor": "#171717",
+    "highlightColor": "#ffffff20",
+    "cornerStyle": "round",
+    "customCSS": "/* input custom css... */"
+  },
+  "animations": {
+    "enabled": true,
+    "bookmarkTiming": "left",
+    "initialType": "animate-up-bouncy",
+    "searchType": "animate-page-shrink",
+    "bookmarkType": "animate-page-up"
+  },
+  "search": {
+    "enabled": true,
+    "font": {
+      "type": "default",
+      "custom": ""
+    },
+    "textColor": "#ffffff",
+    "placeholderText": "search...",
+    "bookmarkPlaceholderText": "find bookmark...",
+    "placeholderTextColor": "#a1a1aa",
+    "searchIconColor": "#14b8a6",
+    "bookmarkIconColor": "#3b82f6",
+    "selectIconColor": "#f59e0b",
+    "engine": "google",
+    "useCustomEngine": false,
+    "customEngineURL": "",
+    "focusedBorderColor": "#0ea5e9",
+    "assist": {
+      "date": true,
+      "math": true,
+      "definitions": true,
+      "conversions": true
+    }
+  },
+  "hotkeys": {
+    "enabled": true,
+    "activationKey": " ",
+    "closePageKey": "x",
+    "searchBookmarksKey": "b"
+  },
+  "bookmarks": {
+    "type": "user-defined",
+    "showBookmarkNames": false,
+    "numberKeys": false,
+    "lineOrientation": "top",
+    "defaultFolderIconType": "ri-folder-fill",
+    "userDefinedCols": 3,
+    "userDefined": [
+      {
+        "color": "#6366f1",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-github-fill",
+        "name": "github",
+        "type": "bookmark",
+        "url": "https://github.com"
+      },
+      {
+        "color": "#f43f5e",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-youtube-fill",
+        "name": "youtube",
+        "type": "bookmark",
+        "url": "https://youtube.com"
+      },
+      {
+        "color": "#14b8a6",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-openai-fill",
+        "name": "chatgpt",
+        "type": "bookmark",
+        "url": "https://chatgpt.com"
+      }
+    ],
+    "defaultBlockyCols": 4,
+    "defaultBlockyColorType": "custom",
+    "defaultBlockyColor": "#ffffff",
+    "bookmarksLocationFirefox": "toolbar",
+    "defaultFaviconSource": "duckduckgo"
+  },
+  "extras": {
+    "snow": {
+      "enabled": "winter"
+    }
+  }
+}
+
+
