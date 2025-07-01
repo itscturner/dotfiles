@@ -1,4 +1,3 @@
-
 {
   "options": {
     "showOptionsButton": true
@@ -11,7 +10,7 @@
     "dynamic": {
       "enabled": true
     },
-    "faviconType": "default"
+    "faviconType": "custom"
   },
   "message": {
     "enabled": true,
@@ -21,7 +20,7 @@
     },
     "textColor": "#ffffff",
     "textSize": 3.75,
-    "type": "afternoon-morning",
+    "type": "time-12",
     "customText": "your custom text",
     "weather": {
       "unitsType": "f"
@@ -89,10 +88,19 @@
     "numberKeys": false,
     "lineOrientation": "top",
     "defaultFolderIconType": "ri-folder-fill",
-    "userDefinedCols": 3,
+    "userDefinedCols": 5,
     "userDefined": [
       {
-        "color": "#6366f1",
+        "color": "#04a5e5",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-box-3-line",
+        "name": "GMail",
+        "type": "bookmark",
+        "url": "https://gmail.com"
+      },
+      {
+        "color": "#bcc0cc",
         "fill": "",
         "iconColor": "#ffffff",
         "iconType": "ri-github-fill",
@@ -101,7 +109,7 @@
         "url": "https://github.com"
       },
       {
-        "color": "#f43f5e",
+        "color": "#d20f39",
         "fill": "",
         "iconColor": "#ffffff",
         "iconType": "ri-youtube-fill",
@@ -110,13 +118,22 @@
         "url": "https://youtube.com"
       },
       {
-        "color": "#14b8a6",
+        "color": "#74aa9c",
         "fill": "",
         "iconColor": "#ffffff",
         "iconType": "ri-openai-fill",
         "name": "chatgpt",
         "type": "bookmark",
         "url": "https://chatgpt.com"
+      },
+      {
+        "color": "#dc8a78",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-box-3-line",
+        "name": "Wired",
+        "type": "bookmark",
+        "url": "https://www.wired.com/"
       }
     ],
     "defaultBlockyCols": 4,
@@ -131,5 +148,3 @@
     }
   }
 }
-
-
