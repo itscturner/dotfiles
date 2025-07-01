@@ -31,7 +31,7 @@
     "enabled": true,
     "url": "./wallpapers/default.png",
     "filters": {
-      "brightness": "1",
+      "brightness": ".8",
       "blur": "0px"
     }
   },
@@ -43,12 +43,12 @@
     "backgroundColor": "#171717",
     "highlightColor": "#ffffff20",
     "cornerStyle": "round",
-    "customCSS": "/* input custom css... */"
+    "customCSS": ""
   },
   "animations": {
     "enabled": true,
     "bookmarkTiming": "left",
-    "initialType": "animate-up-bouncy",
+    "initialType": "animate-grow-scale",
     "searchType": "animate-page-shrink",
     "bookmarkType": "animate-page-up"
   },
@@ -62,13 +62,13 @@
     "placeholderText": "search...",
     "bookmarkPlaceholderText": "find bookmark...",
     "placeholderTextColor": "#a1a1aa",
-    "searchIconColor": "#14b8a6",
+    "searchIconColor": "#ffffff",
     "bookmarkIconColor": "#3b82f6",
     "selectIconColor": "#f59e0b",
     "engine": "google",
     "useCustomEngine": false,
     "customEngineURL": "",
-    "focusedBorderColor": "#0ea5e9",
+    "focusedBorderColor": "#ffffff",
     "assist": {
       "date": true,
       "math": true,
@@ -79,8 +79,8 @@
   "hotkeys": {
     "enabled": true,
     "activationKey": " ",
-    "closePageKey": "x",
-    "searchBookmarksKey": "b"
+    "closePageKey": "q",
+    "searchBookmarksKey": "s"
   },
   "bookmarks": {
     "type": "user-defined",
@@ -140,7 +140,7 @@
     "defaultBlockyColorType": "custom",
     "defaultBlockyColor": "#ffffff",
     "bookmarksLocationFirefox": "toolbar",
-    "defaultFaviconSource": "duckduckgo"
+    "defaultFaviconSource": "google"
   },
   "extras": {
     "snow": {
