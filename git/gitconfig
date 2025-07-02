@@ -10,6 +10,7 @@
   autocrlf = input
 
 [alias]
+  aliases = config --get-regexo '^alias\\.'
   br = branch -av
   cam = commit -am
 
@@ -25,6 +26,7 @@
   remote = yellow bold
 
 [color "status"]
+  branch = blue bold
   added = green bold
   changed = yellow bold
   untracked = red blink
