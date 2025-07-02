@@ -1,3 +1,35 @@
 [user]
-	name = itscturner
-	email = #####
+	name = C Turner
+	email = 7030crt@gmail.com
+
+[github]
+  user = itscturner
+
+[core]
+  editor = nvim
+  autocrlf = input
+
+[alias]
+  br = branch -av
+  cam = commit -am
+
+[color]
+  ui = true
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = blue reverse
+  local = green bold
+  remote = yellow bold
+
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red blink
+
+[color "diff"]
+  old = red bold
+  new = green bold
+
