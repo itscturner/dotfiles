@@ -10,7 +10,7 @@
   autocrlf = input
 
 [alias]
-  aliases = config --get-regexo '^alias\\.'
+  aliases = config --get-regexp '^alias\\.'
   br = branch -av
   cam = commit -am
 
