@@ -1,0 +1,85 @@
+# See dunst(5) for all configuration options
+
+[global]
+    monitor = 0
+    follow = none
+    width = 300
+    height = 300
+    origin = top-right
+    offset = 16x28
+    scale = 0
+    notification_limit = 5
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    indicate_hidden = yes
+    transparency = 0
+    separator_height = 2
+    padding = 6
+    horizontal_padding = 6
+    text_icon_padding = 0
+    frame_width = 2
+    frame_color = "#8caaee"
+    separator_color = frame
+    highlight = '#8caaee'
+    sort = yes
+    font = Terminus 12
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = center
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = no
+    icon_position = left
+    min_icon_size = 64
+    max_icon_size = 64
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    sticky_history = yes
+    history_length = 20
+    dmenu = /usr/bin/dmenu -fn Terminus-12 -nb Black -nf White -p dunst:
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    corner_radius = 2
+    ignore_dbusclose = false
+    force_xwayland = false
+    force_xinerama = false
+    mouse_left_click = open_url
+    mouse_middle_click = do_action
+    mouse_right_click = close_current
+
+[experimental]
+    per_monitor_dpi = false
+    icon_theme = Tango
+    enable_recursive_icon_lookup = true
+
+[urgency_low]
+    background = "#303446"
+    foreground = "#c6d0f5"
+    #frame_color = "#8caaee"
+    timeout = 5
+    #default_icon = /path/to/icon
+
+[urgency_normal]
+    background = "#303446"
+    foreground = "#c6d0f5"
+    #frame_color = "#a6d189"
+    timeout = 10
+    #default_icon = /path/to/icon
+
+[urgency_critical]
+    background = "#303446"
+    foreground = "#c6d0f5"
+    frame_color = "#ef9f76"
+    #frame_color = "#e78284"
+    timeout = 0
+    #default_icon = /path/to/icon
+
