@@ -6,7 +6,7 @@
     "name": "cturner"
   },
   "title": {
-    "defaultTitle": "cturner",
+    "defaultTitle": "home",
     "dynamic": {
       "enabled": true
     },
@@ -29,9 +29,9 @@
   "wallpaper": {
     "type": "url",
     "enabled": true,
-    "url": "./wallpapers/default.png",
+    "url": "https://images.squarespace-cdn.com/content/v1/5e949a92e17d55230cd1d44f/1722802589561-IBO89343O3TSLNNZ8TES/Twilight3x2.png",
     "filters": {
-      "brightness": ".8",
+      "brightness": ".7",
       "blur": "0px"
     }
   },
@@ -77,63 +77,90 @@
     }
   },
   "hotkeys": {
-    "enabled": true,
+    "enabled": false,
     "activationKey": " ",
     "closePageKey": "q",
     "searchBookmarksKey": "s"
   },
   "bookmarks": {
     "type": "user-defined",
-    "showBookmarkNames": false,
+    "showBookmarkNames": true,
     "numberKeys": false,
     "lineOrientation": "top",
-    "defaultFolderIconType": "ri-folder-fill",
-    "userDefinedCols": 5,
+    "defaultFolderIconType": "ri-bookmark-3-line",
+    "userDefinedCols": 8,
     "userDefined": [
       {
-        "color": "#04a5e5",
+        "color": "#85c1dc",
         "fill": "",
         "iconColor": "#ffffff",
-        "iconType": "nf-cod-mail",
-        "name": "GMail",
+        "iconType": "ri-mail-line",
+        "name": "Gmail",
         "type": "bookmark",
-        "url": "https://gmail.com"
+        "url": "https://mail.google.com/"
       },
       {
         "color": "#bcc0cc",
         "fill": "",
         "iconColor": "#ffffff",
         "iconType": "ri-github-fill",
-        "name": "github",
+        "name": "GitHub",
         "type": "bookmark",
         "url": "https://github.com"
       },
       {
-        "color": "#d20f39",
+        "color": "#a6d189",
         "fill": "",
         "iconColor": "#ffffff",
-        "iconType": "ri-youtube-fill",
-        "name": "youtube",
+        "iconType": "ri-timer-line",
+        "name": "Flocus",
+        "type": "bookmark",
+        "url": "https://app.flocus.com/"
+      },
+      {
+        "color": "#e5c890",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-cloud-line",
+        "name": "Weather",
+        "type": "bookmark",
+        "url": "https://weather.com/weather/tenday/l/Sterling+Ranch+CO?canonicalCityId=efdb8127dca718dda95ed80f9d976bf4"
+      },
+      {
+        "color": "#dc8a78",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-newspaper-line",
+        "name": "News",
+        "type": "bookmark",
+        "url": "https://apnews.com/"
+      },
+      {
+        "color": "#e78284",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-youtube-line",
+        "name": "YouTube",
         "type": "bookmark",
         "url": "https://youtube.com"
+      },
+      {
+        "color": "#ca9ee6",
+        "fill": "",
+        "iconColor": "#ffffff",
+        "iconType": "ri-apple-line",
+        "name": "9To5Mac",
+        "type": "bookmark",
+        "url": "https://9to5mac.com/"
       },
       {
         "color": "#74aa9c",
         "fill": "",
         "iconColor": "#ffffff",
         "iconType": "ri-openai-fill",
-        "name": "chatgpt",
+        "name": "ChatGPT",
         "type": "bookmark",
         "url": "https://chatgpt.com"
-      },
-      {
-        "color": "#dc8a78",
-        "fill": "",
-        "iconColor": "#ffffff",
-        "iconType": "nf-md-alpha_w",
-        "name": "Wired",
-        "type": "bookmark",
-        "url": "https://www.wired.com/"
       }
     ],
     "defaultBlockyCols": 4,
