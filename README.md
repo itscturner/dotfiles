@@ -5,13 +5,13 @@
 ![GitHub Release](https://img.shields.io/github/v/tag/itscturner/dotfiles?color=%23cbf078) <br>
 ![GitHub last commit](https://img.shields.io/github/last-commit/itscturner/dotfiles?color=%23cbf078) <br>
 <br>
-btop <br>
-fastfetch <br>
-ghostty <br>
-hypr <br>
-mtab <br>
-nvim <br>
-tmux <br>
-waybar <br>
-yazi <br>
-zsh <br>
+**btop:** Resource monitor that shows usage and stats for processor, memory, disks, network, and processes. <br>
+**fastfetch:** Fetch system information and display it in a visually appealing way. <br>
+**ghostty:** A fast, feature-rich, and cross-platform terminal emulator. <br>
+**hypr:** <br>
+**mtab:** A browser extension that offers a modern new tab page, prioritizing customizability such as choosing wallpapers, bookmarks, and more. <br>
+**nvim:** Open-source text editor. <br>
+**tmux:** A terminal multiplexer. <br>
+**waybar:** A highly customizable Wayland bar. <br>
+**yazi:** A terminal file manager. <br>
+**zsh:** Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. <br>
