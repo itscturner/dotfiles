@@ -2,7 +2,7 @@
 
 ![dotfiles](https://skillicons.dev/icons?i=arch,neovim) <br>
 <br>
-![GitHub last commit](https://img.shields.io/github/last-commit/itscturner/dotfiles?color=%23cbf078) <br>
+![GitHub last commit](https://img.shields.io/github/last-commit/itscturner/dotfiles?color=DD7878) <br>
 <br>
 **btop:** Resource monitor that shows usage and stats for processor, memory, disks, network, and processes. <br>
 **fastfetch:** Fetch system information and display it in a visually appealing way. <br>
