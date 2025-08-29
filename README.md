@@ -1,6 +1,6 @@
 # dotfiles
 
-A curated collection of my personal dotfiles. Includes configuration files for:
+A collection of my dotfiles. Includes configuration files for:
 <br>
 
 **btop:** Resource monitor that shows usage and stats for processor, memory, disks, network, and processes. <br>
