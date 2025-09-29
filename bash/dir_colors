@@ -1,0 +1,26 @@
+TERM ansi
+TERM color-xterm
+TERM console
+TERM Eterm
+TERM gnome
+TERM konsole
+TERM linux
+TERM linux-c
+TERM mach-color
+TERM screen
+TERM screen-256color
+TERM screen-256color-bce
+TERM screen-bce
+TERM screen-w
+TERM screen.linux
+TERM screen.rxvt
+TERM terminator
+TERM tmux-256color
+TERM xterm
+TERM xterm-16color
+TERM xterm-256color
+TERM xterm-88color
+TERM xterm-color
+TERM xterm-debian
+TERM xterm-kitty
+
