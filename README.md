@@ -9,4 +9,5 @@ Configuration files for Linux. <br>
 [bash](https://github.com/itscturner/dotfiles/tree/main/bash) <br>
 [ghostty](https://github.com/itscturner/dotfiles/tree/main/ghostty) <br>
 [git](https://github.com/itscturner/dotfiles/tree/main/git) <br>
+[vim](https://github.com/itscturner/dotfiles/tree/main/vim) <br>
 <br>
