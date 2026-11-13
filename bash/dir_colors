@@ -1,85 +1,143 @@
-#
+# ~/.dir_colors
+
 # echo $LS_COLORS
 
-#
-TERM ansi
-TERM color-xterm
-TERM console
+# --- Terminal Compatibility ---
+# Use wildcards so modern terminals (xterm-256color, tmux-256color, alacritty)
+# match properly instead of falling back to monochrome.
 TERM Eterm
+TERM ansi
+TERM *color*
+TERM con[0-9]*x[0-9]*
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
 TERM gnome
+TERM hurd
+TERM jfbterm
 TERM konsole
+TERM kterm
 TERM linux
 TERM linux-c
 TERM mach-color
-TERM screen
-TERM screen-256color
-TERM screen-256color-bce
-TERM screen-bce
-TERM screen-w
-TERM screen.linux
-TERM screen.rxvt
+TERM mach-gnu-color
+TERM mlterm
+TERM putty
+TERM rxvt*
+TERM screen*
+TERM st
+TERM st-*
 TERM terminator
-TERM tmux-256color
-TERM xterm
-TERM xterm-16color
-TERM xterm-256color
-TERM xterm-88color
-TERM xterm-color
-TERM xterm-debian
-TERM xterm-kitty
+TERM tmux*
+TERM vt100
+TERM xterm*
 
-#
-FILE 00
-DIR 01;34
-LINK 01;33
-EXEC 01;31
-ORPHAN 40;31;01
-SOCK 01;35
-DOOR 01;35
-FIFO 40;33
-BLK 30;33;01
-CHR 40;33;01
-SETUID 95;43;01
-SETGID 30;43;01
-STICKY 00;44
-OTHER_WRITABLE 00;42
-STICKY_OTHER_WRITABLE 00;42
-MISSING 01;05;00;41
-CAPABILITY 30;41
+# --- ANSI Color Code Reference ---
+# Attributes: 00=none, 01=bold, 04=underscore, 05=blink, 07=reverse, 08=concealed
+# Text color: 30=black, 31=red, 32=green, 33=yellow, 34=blue, 35=magenta, 36=cyan, 37=white
+# Background: 40=black, 41=red, 42=green, 43=yellow, 44=blue, 45=magenta, 46=cyan, 47=white
 
-# ARCHIVES / COMPRESSION
+# --- Core File System Types ---
+NORMAL 00                     # Normal
+FILE 00                       # Regular file
+DIR 01;34                     # Directory
+LINK 01;33                    # Symbolic link
+EXEC 01;31                    # File with execute permission
+ORPHAN 40;31;01               # Symlink to nonexistent file
+SOCK 01;35                    # Socket
+DOOR 01;35                    # Door
+FIFO 40;33                    # Pipe
+BLK 30;33;01                  # Block device driver
+CHR 40;33;01                  # Character device driver
+SETUID 95;43;01               # File that is setuid (u+s)
+SETGID 30;43;01               # File that is setgid (g+s)
+STICKY 00;44                  # Dir with the sticky bit set (+t) and not other-writable
+OTHER_WRITABLE 00;42          # Dir that is other-writable (o+w)
+STICKY_OTHER_WRITABLE 00;42   # Dir that is sticky and other-writable (+t,o+w)
+MISSING 01;05;00;41           # Nonexistent file they point to
+CAPABILITY 30;41              # File with capability
+
+# --- Archives & Compressed Files ---
 .tar 01;32
 .tgz 01;32
+.bz 01;32
+.bz2 01;32
+.tbz 01;32
+.tbz2 01;32
+.tz 01;32
 .zip 01;32
 .7z 01;32
-
+.z 01;32
 .deb 01;35
 .rpm 01;35
-
 .jar 01;32
 .war 01;32
+.rar 01;32
+.iso 01;32
 
-# IMAGES / VIDEOS
+# --- Images, Audio & Video ---
 .jpg 01;36
 .jpeg 01;36
 .gif 01;36
 .png 01;36
 .svg 01;36
-
-.mpg 01;36
-.mpeg 01;36
+.webp 01;36
 
 .mov 01;36
+.mpg 01;36
+.mpeg 01;36
+.m2v 01;36
+.mkv 01;36
 .mp4 01;36
+.m4v 01;36
+.mp4v 01;36
+.webm 01;36
 
-# AUDIO
 .mp3 01;36
+.m4a 01;36
 .wav 01;36
 
-# OTHER
+# --- Documents & Markup ---
+.md 0;35
+.markdown 0;35
+.txt 0;35
+.pdf 0;35
+.doc 0;35
+.docx 0;35
+.xls 0;35
+.xlsx 0;35
+.ppt 0;35
+.pptx 0;35
+.csv 0;35
+
+# --- Source Code & Configuration Files ---
+.py 0;35
+.js 0;35
+.go 0;35
+.c 0;35
+.cpp 0;35
+.java 0;35
+.php 0;35
+.lua 0;35
+.sh 0;35
+.bash 0;35
+.zsh 0;35
+.cfg 0;35
+.env 0;35
+.json 0;35
+.ini 0;35
 .yml 0;35
 .yaml 0;35
-.csv 0;35
-.ods 0;35
-.odt 0;35
 .xml 0;35
+
+# --- Temporary, Backup & Build Artifacts ---
+*~ 00;90
+*# 00;90
+.bak 00;90
+.tmp 00;90
+.temp 00;90
+.swp 00;90
+.swo 00;90
+.log 00;90
+.pyc 00;90
