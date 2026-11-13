@@ -1,23 +1,59 @@
-#
+# ~/.inputrc
+
+# Inherit system-wide Readline defaults first
 $include /etc/inputrc
 
-#
-set bell-style none
-
-#
-set blink-matching-paren on
-
-#
+# --- Tab Completion ---
+# Ignore case when completing file and directory names
 set completion-ignore-case on
-
-#
+# Treat hyphens (-) and underscores (_) as equivalent during completion
 set completion-map-case on
-
-#
+# Show all matches immediately on a single Tab press instead of requiring two
+set show-all-if-ambiguous on
+# Show matches immediately even when no partial completion can be made
+set show-all-if-unmodified on
+# Append a slash (/) to completed symlinked directories
+set mark-symlinked-directories on
+# Abbreviate long common prefixes with "..." when displaying many matches
+set completion-prefix-display-length 3
+# Only prompt "Display all N possibilities?" if matches exceed 500
 set completion-query-items 500
 
-#
+# --- Visuals & Bell ---
+# Disable the terminal beep and screen flash
+set bell-style none
+# Colorize file types in completion lists using LS_COLORS
+set colored-stats on
+# Highlight the typed prefix of completion matches in a distinct color
+set colored-completion-prefix on
+# Append file type indicators (like / for directories, * for executables)
+set visible-stats on
+# Briefly jump the cursor to the matching opening parenthesis when closing one
+set blink-matching-paren on
+
+# --- History Search & Navigation ---
+# Up/Down arrows search history for commands starting with what you already typed
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+# Ctrl+P and Ctrl+N also perform prefix-based history search
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+# Ctrl+Left and Ctrl+Right jump by whole words across common terminal emulators
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
+# --- Editing & Macros ---
+# Allow UTF-8 characters to input and display properly
+set input-meta on
+set output-meta on
+set convert-meta off
+# Prevent pasted multi-line text from executing prematurely
 set enable-bracketed-paste on
 
-#
-set colored-stats
+# Alt+s prepends "sudo " to the current command line
+"\es": "\C-asudo \C-e"
