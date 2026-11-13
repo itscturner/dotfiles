@@ -1,21 +1,117 @@
-theme = "Monokai Pro"
+# Ghostty Configuration File
 
-title = " "
+# --- Theme & Colors ---
+# Run `ghostty +list-themes` to see all built-in options
+theme = "Monokai Pro"           # Theme name or path, or "light:theme,dark:theme"
 
-font-family = Berkeley Mono
-font-style = Regular
-font-size = 16
-font-thicken = true
+# --- Typography ---
+font-family = Berkeley Mono     # Font name or empty to reset
+font-style = Regular            # Named font style or "false" to disable
+font-size = 16                  # Font size in points (Number)
+font-thicken = true             # Increase font weight slightly (Boolean: true/false)
 
+
+
+# --- Window & Appearance ---
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+window-save-state = always
+# Optional transparency and blur
+background-opacity = 0.95
+background-blur-radius = 20
+
+
+
+# --- Window Settings ---
+fullscreen = false               # Full screen
+title = " "                      # Window title
+working-directory = "home"       # Working Directory (Values: "home", "inherit", or absolute path)
+
+
+
+
+
+# --- Cursor & Mouse ---
 cursor-style = block
 cursor-style-blink = true
-
 mouse-hide-while-typing = true
-
-clipboard-read = allow
-clipboard-write = allow
-clipboard-paste-protection = false
-clipboard-paste-bracketed-safe = true
 copy-on-select = clipboard
 
-quit-after-last-window-closed = false
+mouse-hide-while-typing = true   # Boolean: true/false
+mouse-shift-capture = false      # Values: "true", "false", "always", "never"
+mouse-scroll-multiplier = 1.0    # Number: 0.01-10000
+
+
+
+
+
+
+
+
+
+# --- Shell & Behavior ---
+shell-integration = detect
+scrollback-limit = 10000
+confirm-close-surface = false
+
+
+
+
+
+# --- Platform Specific (macOS) ---
+macos-non-native-fullscreen = false    # Values: "visible-menu", "true", "false"
+macos-titlebar-style = "transparent"   # Values: "native", "transparent", "tabs", "hidden"
+macos-titlebar-proxy-icon = "visible"  # Values: "visible", "hidden"
+macos-option-as-alt = false            # Values: "true", "false", "left", "right"
+macos-window-shadow = true             # Boolean: true/false
+macos-auto-secure-input = true         # Boolean: true/false
+macos-secure-input-indication = true   # Boolean: true/false
+
+
+# --- macOS Icon Settings ---
+macos-icon = "official"               # Values: "official", "custom-style"
+macos-icon-frame = "aluminum"         # Values: "aluminum", "beige", "plastic", "chrome"
+macos-icon-ghost-color = ""           # Color: Hex code (#RRGGBB)
+macos-icon-screen-color = ""          # Color: Hex code (#RRGGBB) (comma-separated for gradient)
+
+
+
+
+# --- Custom Keybindings ---
+# Format: keybind = trigger=action
+keybind = ctrl+shift+r=reload_config
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+
+
+
+
+# --- Clipboard Settings ---
+clipboard-read = allow                    # Clipboard read (Values: "ask", "allow", "deny")
+clipboard-write = allow                   # Clipboard write (Values: "ask", "allow", "deny")
+clipboard-paste-protection = false        # Clipboard paste protection (Boolean: true/false)
+clipboard-paste-bracketed-safe = true     # Clipboard paste bracketed safe (Boolean: true/false)
+
+
+
+
+# --- Additional Settings ---
+desktop-notifications = true           # Boolean: true/false
+bold-is-bright = false                # Boolean: true/false
+term = "xterm-256color"               # String: Terminal type
+enquiry-response = ""                 # String: ENQ response
+
+
+
+
+# --- Application Behavior ---
+focus-follows-mouse = false               # Boolean: true/false
+initial-window = true                     # Boolean: true/false
+quit-after-last-window-closed = true     # Boolean: true/false
+quit-after-last-window-closed-delay = ""     # Time format: e.g., "1h30m", "45s"
+
+
+
+
+
