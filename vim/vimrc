@@ -1,25 +1,123 @@
-set ignorecase
-set smartcase
+" ~/.vimrc
 
-set hlsearch
+" --- 1. BASELINE DEFAULTS ---
+" Load Vim's built-in modern defaults (syntax, filetype indent, incsearch, etc.)
+" Creating a .vimrc disables these unless explicitly sourced first.
+if filereadable($VIMRUNTIME . '/defaults.vim')
+  source $VIMRUNTIME/defaults.vim
+endif
 
-set showmatch
-set mat=5
+set nocompatible              " Disable legacy Vi compatibility
+set encoding=utf-8            " Use UTF-8 encoding everywhere
+set hidden                    " Allow switching buffers without saving first
+set autoread                  " Automatically reload files changed outside Vim
 
-set noerrorbells
-set novisualbell
+" --- 2. USER INTERFACE & VISUALS ---
+syntax on                     " Enable syntax highlighting
+"set number                    " Show absolute line numbers
+"set relativenumber            " Show relative line numbers for fast jumping
+"set cursorline                " Highlight the current line
+set showmatch                 " Briefly jump to matching bracket when closing one
+set mat=5                     " Show matching bracket for 0.5 seconds
+set showcmd                   " Show partial commands in the bottom right
+set wildmenu                  " Visual autocomplete menu for command-line mode
+set scrolloff=5               " Keep at least N lines visible above/below cursor
+set splitbelow                " Open horizontal splits below the current window
+set splitright                " Open vertical splits to the right of current window
+set noerrorbells              " Disable audio bells
+set novisualbell              " Disable screen flash
 
-syntax enable
+" --- 3. STATUS LINE ---
+set laststatus=2              " Always display the status line
 
-set nobackup
-set nowb
-set noswapfile
+" Status Line - Mode Mappings:
+let g:modes = {
+      \ 'n': ['NORMAL', 'StatusLineSection'],    'no': ['N-PENDING', 'StatusLineSection'],
+      \ 'v': ['VISUAL', 'StatusLineSectionV'],   'V':  ['V-LINE', 'StatusLineSectionV'],
+      \ "\<C-v>": ['V-BLOCK', 'StatusLineSectionV'], 's': ['SELECT', 'StatusLineSectionV'],
+      \ 'S': ['S-LINE', 'StatusLineSectionV'],   "\<C-s>": ['S-BLOCK', 'StatusLineSectionV'],
+      \ 'i': ['INSERT', 'StatusLineSectionI'],   'ic': ['INSERT', 'StatusLineSectionI'],
+      \ 'R': ['REPLACE', 'StatusLineSectionR'],  'Rv': ['V-REPLACE', 'StatusLineSectionR'],
+      \ 'c': ['COMMAND', 'StatusLineSectionC'],  'cv': ['EX', 'StatusLineSectionC'],
+      \ 'ce': ['EX', 'StatusLineSectionC'],      'r':  ['PROMPT', 'StatusLineSectionR'],
+      \ 'rm': ['MORE', 'StatusLineSectionR'],    'r?': ['CONFIRM', 'StatusLineSectionR'],
+      \ '!': ['SHELL', 'StatusLineSectionC'],    't':  ['TERMINAL', 'StatusLineSectionI']
+      \ }
 
-set expandtab
-set smarttab
+" Status Line - Highlight Groups:
+fun! <SID>StatusLineHighlights()
+  hi StatusLine         ctermbg=8  guibg=#313131 ctermfg=15 guifg=#cccccc
+  hi StatusLineNC       ctermbg=0  guibg=#313131 ctermfg=8  guifg=#999999
+  hi StatusLineSection  ctermbg=8  guibg=#55b5db ctermfg=0  guifg=#333333
+  hi StatusLineSectionV ctermbg=11 guibg=#a074c4 ctermfg=0  guifg=#000000
+  hi StatusLineSectionI ctermbg=10 guibg=#9fca56 ctermfg=0  guifg=#000000
+  hi StatusLineSectionC ctermbg=12 guibg=#db7b55 ctermfg=0  guifg=#000000
+  hi StatusLineSectionR ctermbg=12 guibg=#ed3f45 ctermfg=0  guifg=#000000
+endfun
+call <SID>StatusLineHighlights()
 
-set shiftwidth=2
-set tabstop=2
+" Status Line - Git Branch & Renderer:
+fun! StatusLineUpdateGitBranch()
+  let dir = expand('%:p:h')
+  let b:git_branch = isdirectory(dir) ? trim(system('git -C ' . shellescape(dir) . ' rev-parse --abbrev-ref HEAD 2>/dev/null')) : ''
+  if v:shell_error | let b:git_branch = '' | endif
+endfun
 
-set ai "Auto indent
-set si "Smart indent
+fun! StatusLineRenderer()
+  let [label, group] = get(g:modes, mode(), [toupper(mode()), 'StatusLineSection'])
+  let hl = '%#' . group . '#'
+  let git = empty(get(b:, 'git_branch', '')) ? '' : b:git_branch . ' '
+  let paste = exists('*PasteForStatusline') ? PasteForStatusline() : (&paste ? '[PASTE] ' : '')
+  return hl . '  ' . git . '%F %y %m %#StatusLine#%=' . hl . ' ' . paste . '[' . label . '] %v:%l/%L %{winnr()}  '
+endfun
+
+" Status Line - Autocommands:
+if has('vim_starting') | set statusline=\ \ %F\ %y\ %m%=[NORMAL]\ %v:%l/%L\ %{winnr()}\ \  | endif
+
+augroup vimrc_statusline
+  au!
+  au BufEnter,FocusGained,BufWritePost * call StatusLineUpdateGitBranch()
+  au FocusGained,VimEnter,WinEnter,BufWinEnter * setlocal statusline=%!StatusLineRenderer()
+  au FocusLost,VimLeave,WinLeave,BufWinLeave * setlocal statusline&
+  au Colorscheme * call <SID>StatusLineHighlights()
+augroup END
+
+" --- 4. INDENTATION & FORMATTING ---
+filetype plugin indent on     " Enable filetype-specific indentation rules
+set expandtab                 " Convert tabs to spaces
+set smarttab                  " Insert/delete 'shiftwidth' spaces at line start
+set tabstop=2                 " Display width of a tab character
+set shiftwidth=2              " Number of spaces to use for auto-indent
+set softtabstop=2             " Number of spaces inserted when pressing Tab
+set autoindent                " Copy indent from current line when starting a new one
+set smartindent               " Smart auto-indenting for C-like programs
+set ai                        " Auto indent
+set si                        " Smart indent
+"set wrap                      " Visually wrap long lines
+
+" --- 5. SEARCH & REPLACEMENT ---
+set incsearch                 " Highlight matches dynamically as you type
+set hlsearch                  " Highlight all search matches
+set ignorecase                " Ignore case when searching...
+set smartcase                 " ...unless the search pattern contains uppercase letters
+
+" --- 6. KEY MAPPINGS ---
+" Set Space as the custom <Leader> key
+nnoremap <Space> <Nop>
+let mapleader = " "
+
+" Clear search highlighting with <Leader> + /
+nnoremap <leader>/ :nohlsearch<CR>
+
+" Keep visual selection active when indenting blocks
+vnoremap < <gv
+vnoremap > >gv
+
+" Edit and reload .vimrc file
+nnoremap <Leader>ve :e $MYVIMRC<CR>
+nnoremap <Leader>vr :source $MYVIMRC<CR>
+
+" --- 7. BACKUPS & PERSISTENT UNDO ---
+set noswapfile                " Disable .swp files
+set nobackup                  " Disable backup files
+set nowritebackup             " Disable backup before overwriting a file
