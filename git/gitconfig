@@ -1,7 +1,7 @@
 [user]
   name = Casey Turner
   username = itscturner
-  email = itscturner@email.com
+  email = <EMAIL>
 
 [core]
   editor = vim
